@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+	<backend>
+		<events>
+			<item type="label" name="AddEvents">
+				<translation language="nl"><![CDATA[Events toevoegen]]></translation>
+				<translation language="en"><![CDATA[add Events]]></translation>
+			</item>
+		</events>
+		<core>
+			<item type="label" name="Events">
+				<translation language="nl"><![CDATA[Events]]></translation>
+				<translation language="en"><![CDATA[Events]]></translation>
+			</item>
+            <item type="label" name="EventsDetail">
+                <translation language="nl"><![CDATA[Events detail]]></translation>
+                <translation language="en"><![CDATA[Events detail]]></translation>
+            </item>
+            <item type="label" name="EventsCategory">
+                <translation language="nl"><![CDATA[Events categorie]]></translation>
+                <translation language="en"><![CDATA[Events category]]></translation>
+            </item>
+            <item type="message" name="NoCategories">
+                <translation language="en"><![CDATA[no categories]]></translation>
+                <translation language="nl"><![CDATA[geen categorieën]]></translation>
+            </item>
+		</core>
+		<Pages>
+			<item type="label" name="UpcomingEvents">
+				<translation language="nl"><![CDATA[Eerstkomende evenementen]]></translation></item></Pages></backend>
+	<frontend>
+		<core>
+		</core>
+	</frontend>
+</locale>
