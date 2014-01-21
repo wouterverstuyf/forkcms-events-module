@@ -27,16 +27,6 @@ class BackendEventsAddCategory extends BackendBaseActionAdd
 	{
 		$this->frm = new BackendForm('addCategory');
 		$this->frm->addText('title');
-		$this->frm->addDropdown('color', array(
-			'' => 'Geen',
-			'algemeen' => 'Algemeen',
-			'feest' => 'Feest',
-			'praesidium' => 'Praesidium',
-			'stuveco' => 'Stuveco',
-			'yucca' => 'Yucca',
-			'cultuur' => 'Cultuur',
-			'sport' => 'Sport'
-		));
 
 		$this->meta = new BackendMeta($this->frm, null, 'title', true);
 		$this->meta->setURLCallback('BackendEventsModel', 'getURLForCategory');
@@ -59,7 +49,6 @@ class BackendEventsAddCategory extends BackendBaseActionAdd
 			{
 				// build item
 				$item['title'] = $this->frm->getField('title')->getValue();
-				$item['color'] = $this->frm->getField('color')->getValue();
 				$item['language'] = BL::getWorkingLanguage();
 				$item['meta_id'] = $this->meta->save();
 				$item['sequence'] = BackendEventsModel::getMaximumCategorySequence() + 1;

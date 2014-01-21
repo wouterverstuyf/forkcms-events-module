@@ -20,11 +20,6 @@
 				<div class="options">
 					{$txtTitle} {$txtTitleError}
 				</div>
-				<div class="options">
-					<label for="color">{$lblColor|ucfirst}</label>
-					{$ddmColor} {$ddmColorError}
-					<span class="helpTxt">{$msgColorRgbHelp|ucfirst}</span>
-				</div>
 			</div>
 		</div>
 

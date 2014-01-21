@@ -45,16 +45,6 @@ class BackendEventsEditCategory extends BackendBaseActionEdit
 		// create form
 		$this->frm = new BackendForm('editCategory');
 		$this->frm->addText('title', $this->record['title']);
-		$this->frm->addDropdown('color', array(
-			'' => 'Geen',
-			'algemeen' => 'Algemeen',
-			'feest' => 'Feest',
-			'praesidium' => 'Praesidium',
-			'stuveco' => 'Stuveco',
-			'yucca' => 'Yucca',
-			'cultuur' => 'Cultuur',
-			'sport' => 'Sport'
-		), $this->record['color']);
 
 		$this->meta = new BackendMeta($this->frm, $this->record['meta_id'], 'title', true);
 		$this->meta->setUrlCallback('BackendEventsModel', 'getURLForCategory', array($this->record['id']));
@@ -90,7 +80,6 @@ class BackendEventsEditCategory extends BackendBaseActionEdit
 				$item['id'] = $this->id;
 				$item['language'] = $this->record['language'];
 				$item['title'] = $this->frm->getField('title')->getValue();
-				$item['color'] = $this->frm->getField('color')->getValue();
 				$item['meta_id'] = $this->meta->save(true);
 
 				// update the item

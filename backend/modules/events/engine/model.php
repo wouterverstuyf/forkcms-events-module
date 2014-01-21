@@ -12,7 +12,7 @@ class BackendEventsModel
 		 WHERE i.language = ?';
 
 	const QRY_DATAGRID_BROWSE_CATEGORIES =
-		'SELECT c.id, c.title, c.color, COUNT(i.id) AS num_items, c.sequence
+		'SELECT c.id, c.title, COUNT(i.id) AS num_items, c.sequence
 		 FROM events_categories AS c
 		 LEFT OUTER JOIN events AS i ON c.id = i.category_id AND i.language = c.language
 		 WHERE c.language = ?
