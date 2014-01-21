@@ -45,7 +45,7 @@ class EventsInstaller extends ModuleInstaller
 
 		// add extra's
 		$subnameID = $this->insertExtra('events', 'block', 'Events', null, null, 'N', 1000);
-		$this->insertExtra('events', 'block', 'EventsDetail', 'detail', null, 'N', 1001);
+		$this->insertExtra('events', 'widget', 'UpcomingEventsFull', 'upcoming_events_full');
 
 		$navigationModulesId = $this->setNavigation(null, 'Modules');
 		$navigationEventsId = $this->setNavigation($navigationModulesId, 'Events');

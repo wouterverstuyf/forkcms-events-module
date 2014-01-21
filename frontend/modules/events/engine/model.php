@@ -16,7 +16,7 @@ class FrontendEventsModel
 	{
 		$item = (array) FrontendModel::getContainer()->get('database')->getRecord(
 			'SELECT i.id, i.language, i.title, i.introduction, i.text,
-       UNIX_TIMESTAMP(i.begin_date) AS begin_date, UNIX_TIMESTAMP(i.end_date) AS end_date, c.color,
+       UNIX_TIMESTAMP(i.begin_date) AS begin_date, UNIX_TIMESTAMP(i.end_date) AS end_date,
        c.title AS category_title, m2.url AS category_url,
 			 m.keywords AS meta_keywords, m.keywords_overwrite AS meta_keywords_overwrite,
 			 m.description AS meta_description, m.description_overwrite AS meta_description_overwrite,
@@ -178,7 +178,7 @@ class FrontendEventsModel
 	public static function getAllByCategory($categoryId, $limit = 10, $offset = 0)
 	{
 		$items = (array) FrontendModel::getContainer()->get('database')->getRecords(
-			'SELECT i.*, UNIX_TIMESTAMP(i.begin_date) AS begin_date, UNIX_TIMESTAMP(end_date) AS end_date, m.url, c.color,
+			'SELECT i.*, UNIX_TIMESTAMP(i.begin_date) AS begin_date, UNIX_TIMESTAMP(end_date) AS end_date, m.url,
         c.title AS category_title, m2.url AS category_url
 			 FROM events AS i
        INNER JOIN events_categories AS c ON i.category_id = c.id
@@ -220,7 +220,7 @@ class FrontendEventsModel
   public static function getAllByDate($day, $month, $year, $limit = 10, $offset = 0)
   {
     $items = (array) FrontendModel::getContainer()->get('database')->getRecords(
-      'SELECT i.*, m.url, c.color, c.title AS category_title, m2.url AS category_url
+      'SELECT i.*, m.url, c.title AS category_title, m2.url AS category_url
        FROM events AS i
        INNER JOIN meta AS m ON i.meta_id = m.id
        LEFT JOIN events_categories AS c ON i.category_id = c.id
@@ -258,7 +258,7 @@ class FrontendEventsModel
 	public static function getAllCategories()
 	{
 		$return = (array) FrontendModel::getContainer()->get('database')->getRecords(
-			'SELECT c.id, c.title AS label, m.url, COUNT(c.id) AS total, m.data AS meta_data, c.color
+			'SELECT c.id, c.title AS label, m.url, COUNT(c.id) AS total, m.data AS meta_data
 			 FROM events_categories AS c
 			 INNER JOIN events AS i ON c.id = i.category_id AND c.language = i.language
 			 INNER JOIN meta AS m ON c.meta_id = m.id
