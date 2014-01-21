@@ -1,0 +1,116 @@
+.eventdate {
+  padding: 4px;
+  text-align: center;
+  font-size: 1.14286em;
+  line-height: 1.25em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  margin-bottom: 1.42857em;
+}
+.daynames {
+  float: left;
+  width: 100%;
+}
+
+.dayname {
+  float: left;
+  width: 108px;
+  padding: 0.5em;
+  text-align: center;
+  border: 2px solid #cccccc;
+  color: white;
+  font-weight: bold;
+  background: #237836;
+}
+
+.emptyday, .day {
+  float: left;
+  width: 108px;
+  padding: 0 2px;
+  height: 108px;
+  border: 2px solid #cccccc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.emptyday p.number, .day p.number {
+  font-weight: bold;
+  margin: 0;
+}
+.emptyday p.number span, .day p.number span {
+  background: #417940;
+  color: white;
+  padding: 0 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 0.71429em;
+  line-height: 2em;
+}
+.emptyday a.event, .day a.event {
+  font-size: 0.85714em;
+  line-height: 1.66667em;
+  margin: 0;
+  color: #5a5a5c;
+  display: inline-block;
+}
+
+
+
+
+.filter {
+  margin-bottom: 1.42857em;
+  text-align: center;
+  float: left;
+  width: 100%;
+  background: #237836;
+  padding: 0.5em;
+  color: white;
+}
+.filter input[type="submit"] {
+  background: #417940;
+  border: 2px solid #21442c;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+.filter input[type="submit"]:hover {
+  background: #21442c;
+}
+.filter a {
+  color: white;
+  background: #417940;
+  border: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 6px 4px;
+  margin: 0 1px;
+}
+.filter a:hover {
+  background: #21442c;
+}
+.filter a.previous {
+  float: left;
+}
+.filter a.next {
+  float: right;
+}

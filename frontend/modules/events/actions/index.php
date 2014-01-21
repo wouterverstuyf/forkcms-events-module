@@ -27,6 +27,9 @@ class FrontendEventsIndex extends FrontendBaseBlock
 	public function execute()
 	{
 		parent::execute();
+
+		$this->header->addCSS('/frontend/modules/' . $this->getModule() . '/layout/css/events.css');
+
 		$this->loadTemplate();
 		$this->setFilter();
 		$this->loadForm();
@@ -45,7 +48,20 @@ class FrontendEventsIndex extends FrontendBaseBlock
 	 	if(!$this->filter['month']) $currentMonth = date('m', time());
 	 	else $currentMonth = $this->filter['month'];
 
-	 	$arrayOfMonths = array('1' => 'Januari', '2' => 'Februari', '3' => 'Maart', '4' => 'April', '5' => 'Mei', '6' => 'Juni', '7' => 'Juli', '8' => 'Augustus', '9' => 'September', '10' => 'October', '11' => 'November', '12' => 'December');
+	 	$arrayOfMonths = array(
+	 		'1' => ucfirst(FL::lbl('January')),
+	 		'2' => ucfirst(FL::lbl('February')),
+	 		'3' => ucfirst(FL::lbl('March')),
+	 		'4' => ucfirst(FL::lbl('April')),
+	 		'5' => ucfirst(FL::lbl('May')),
+	 		'6' => ucfirst(FL::lbl('June')),
+	 		'7' => ucfirst(FL::lbl('July')),
+	 		'8' => ucfirst(FL::lbl('August')),
+	 		'9' => ucfirst(FL::lbl('September')),
+	 		'10' => ucfirst(FL::lbl('October')),
+	 		'11' => ucfirst(FL::lbl('November')),
+	 		'12' => ucfirst(FL::lbl('December'))
+	 	);
 
 	 	// values for dropdown years
 	 	if(!$this->filter['year']) $currentYear = date('Y', time());
@@ -84,10 +100,6 @@ class FrontendEventsIndex extends FrontendBaseBlock
 	protected function parse()
 	{
 		$this->tpl->assign("dateFormat", "\<\p\>d\<\/\p\> M");
-
-		// assign categories
-		$categories = FrontendEventsModel::getAllCategories();
-		$this->tpl->assign('categories', $categories);
 
 		// build calendar
 		$day = date('j');

@@ -34,7 +34,7 @@ class FrontendEventsCategory extends FrontendBaseBlock
 	{
 		parent::execute();
 		$this->tpl->assign('hideContentTitle', true);
-		$this->loadTemplate(null, true);
+		$this->loadTemplate();
 		$this->getData();
 		$this->parse();
 	}

@@ -1,14 +1,3 @@
-{*
-	variables that are available:
-	- {$items}: contains an array with all posts, each element contains data about the post
-*}
-
-<div class="categories">
-	{iteration:categories}
-	<span class="{$categories.color}">{$categories.label}</span>
-	{/iteration:categories}
-</div>
-
 <div class="filter">
 {form:filter}
     <a class="previous" href="{$prevYearUrl}" title="{$lblPreviousYear|ucfirst}">{$lblPreviousYear|ucfirst}</a>
