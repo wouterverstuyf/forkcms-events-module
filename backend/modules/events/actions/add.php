@@ -1,12 +1,4 @@
 <?php
-
-/*
- * This file is part of Fork CMS.
- *
- * For the full copyright and license information, please view the license
- * file that was distributed with this source code.
- */
-
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOException;
 
@@ -53,7 +45,7 @@ class BackendEventsAdd extends BackendBaseActionAdd
 
 		// meta
 		$this->meta = new BackendMeta($this->frm, null, 'title', true);
-		
+
 	}
 
 	/**
@@ -90,14 +82,14 @@ class BackendEventsAdd extends BackendBaseActionAdd
 			$fields['begin_date_time']->isFilled(BL::err('FieldIsRequired'));
 			$fields['begin_date_date']->isValid(BL::err('DateIsInvalid'));
 			$fields['begin_date_time']->isValid(BL::err('TimeIsInvalid'));
-			
+
 			if($fields['end_date_date']->isFilled() || $fields['end_date_time']->isFilled()) {
 				$fields['end_date_date']->isFilled(BL::err('FieldIsRequired'));
 				$fields['end_date_time']->isFilled(BL::err('FieldIsRequired'));
 				$fields['end_date_date']->isValid(BL::err('DateIsInvalid'));
 				$fields['end_date_time']->isValid(BL::err('TimeIsInvalid'));
 			}
-			
+
 			$fields['category_id']->isFilled(BL::err('FieldIsRequired'));
 
 			// validate the image
@@ -107,7 +99,7 @@ class BackendEventsAdd extends BackendBaseActionAdd
 				$this->frm->getField('image')->isAllowedExtension(array('jpg', 'png', 'gif', 'jpeg'), BL::err('JPGGIFAndPNGOnly'));
 				$this->frm->getField('image')->isAllowedMimeType(array('image/jpg', 'image/png', 'image/gif', 'image/jpeg'), BL::err('JPGGIFAndPNGOnly'));
 			}
-			
+
 			// validate meta
 			$this->meta->validate();
 
@@ -139,22 +131,22 @@ class BackendEventsAdd extends BackendBaseActionAdd
 
 				// the image path
 				$imagePath = FRONTEND_FILES_PATH . '/events';
-				
+
 				// create folders if needed
 				$fs = new Filesystem();
 				if(!$fs->exists($imagePath . '/source')) $fs->mkdir($imagePath . '/source');
 				if(!$fs->exists($imagePath . '/128x128')) $fs->mkdir($imagePath . '/128x128');
-				
+
 				// image provided?
 				if($this->frm->getField('image')->isFilled())
 				{
 					// build the image name
 					$item['image'] = $this->meta->getURL() . '.' . $this->frm->getField('image')->getExtension();
-				
+
 					// upload the image & generate thumbnails
 					$this->frm->getField('image')->generateThumbnails($imagePath, $item['image']);
-				}				
-				
+				}
+
 				// insert it
 				$item['id'] = BackendEventsModel::insert($item);
 

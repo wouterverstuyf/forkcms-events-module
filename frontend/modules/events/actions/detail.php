@@ -1,12 +1,4 @@
 <?php
-
-/*
- * This file is part of Fork CMS.
- *
- * For the full copyright and license information, please view the license
- * file that was distributed with this source code.
- */
-
 /**
  * This is the index-action (default), it will display the overview of Events posts
  *
@@ -53,10 +45,6 @@ class FrontendEventsDetail extends FrontendBaseBlock
 	 */
 	protected function parse()
 	{
-		/**
-		 * @TODO add specified image
-		 * $this->header->addOpenGraphImage(FRONTEND_FILES_URL . '/events/images/source/' . $this->record['image']);
-		 */
 
 		// build Facebook  OpenGraph data
 		$this->header->addOpenGraphData('title', $this->record['meta_title'], true);

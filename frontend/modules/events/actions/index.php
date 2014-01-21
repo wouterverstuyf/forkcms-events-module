@@ -1,16 +1,8 @@
 <?php
-
-/*
- * This file is part of Fork CMS.
- *
- * For the full copyright and license information, please view the license
- * file that was distributed with this source code.
- */
-
 /**
- * This is the index-action (default), it will display the overview of Events posts
+ * This is the index-action (default), it will display the overview of Events posts in a calendar overview
  *
- * @author Arend Pijls <arend.pijls@wijs.be>
+ * @author Wouter Verstuyf <info@webflow.be>
  */
 class FrontendEventsIndex extends FrontendBaseBlock
 {
