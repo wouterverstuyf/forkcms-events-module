@@ -33,6 +33,10 @@
   </backend>
 	<frontend>
 		<core>
+      <item type="label" name="Filter">
+        <translation language="nl"><![CDATA[Filter]]></translation>
+        <translation language="en"><![CDATA[Filter]]></translation>
+      </item>
       <item type="label" name="PreviousYear">
         <translation language="nl"><![CDATA[Vorig jaar]]></translation>
         <translation language="en"><![CDATA[Previous year]]></translation>
