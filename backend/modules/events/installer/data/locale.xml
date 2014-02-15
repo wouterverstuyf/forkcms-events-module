@@ -47,7 +47,7 @@
       </item>
       <item type="label" name="NextMonth">
         <translation language="nl"><![CDATA[Volgende maand]]></translation>
-        <translation language="en"><![CDATA[Next year]]></translation>
+        <translation language="en"><![CDATA[Next month]]></translation>
       </item>
       <item type="label" name="January">
         <translation language="nl"><![CDATA[Januari]]></translation>
