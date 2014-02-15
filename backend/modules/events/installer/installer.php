@@ -43,6 +43,16 @@ class EventsInstaller extends ModuleInstaller
 
 		$this->makeSearchable('events');
 
+		// connect to database
+		$db = $this->getDB();
+		
+		// insert default category for every language
+		foreach($this->getLanguages() as $language)
+		{
+		$metaId = $db->insert('meta', array('keywords' => 'default', 'description' => 'default', 'title' => 'default', 'url' => 'default'));
+		$db->insert('events_categories', array('meta_id' => $metaId, 'language'=> $language, 'title' => 'default', 'sequence' => 1));
+		}
+
 		// add extra's
 		$subnameID = $this->insertExtra('events', 'block', 'Events', null, null, 'N', 1000);
 		$this->insertExtra('events', 'widget', 'UpcomingEventsFull', 'upcoming_events_full');
