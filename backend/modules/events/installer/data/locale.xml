@@ -53,55 +53,6 @@
         <translation language="nl"><![CDATA[Volgende maand]]></translation>
         <translation language="en"><![CDATA[Next month]]></translation>
       </item>
-      <item type="label" name="January">
-        <translation language="nl"><![CDATA[Januari]]></translation>
-        <translation language="en"><![CDATA[January]]></translation>
-      </item>
-      <item type="label" name="February">
-        <translation language="nl"><![CDATA[Februari]]></translation>
-        <translation language="en"><![CDATA[February]]></translation>
-      </item>
-      <item type="label" name="March">
-        <translation language="nl"><![CDATA[Maart]]></translation>
-        <translation language="en"><![CDATA[March]]></translation>
-      </item>
-      <item type="label" name="April">
-        <translation language="nl"><![CDATA[April]]></translation>
-        <translation language="en"><![CDATA[April]]></translation>
-      </item>
-      <item type="label" name="May">
-        <translation language="nl"><![CDATA[Mei]]></translation>
-        <translation language="en"><![CDATA[May]]></translation>
-      </item>
-      <item type="label" name="June">
-        <translation language="nl"><![CDATA[Juni]]></translation>
-        <translation language="en"><![CDATA[June]]></translation>
-      </item>
-      <item type="label" name="July">
-        <translation language="nl"><![CDATA[Juli]]></translation>
-        <translation language="en"><![CDATA[July]]></translation>
-      </item>
-      <item type="label" name="August">
-        <translation language="nl"><![CDATA[Augustus]]></translation>
-        <translation language="en"><![CDATA[August]]></translation>
-      </item>
-      <item type="label" name="September">
-        <translation language="nl"><![CDATA[September]]></translation>
-        <translation language="en"><![CDATA[September]]></translation>
-      </item>
-      <item type="label" name="October">
-        <translation language="nl"><![CDATA[October]]></translation>
-        <translation language="en"><![CDATA[October]]></translation>
-      </item>
-      <item type="label" name="November">
-        <translation language="nl"><![CDATA[November]]></translation>
-        <translation language="en"><![CDATA[November]]></translation>
-      </item>
-      <item type="label" name="December">
-        <translation language="nl"><![CDATA[December]]></translation>
-        <translation language="en"><![CDATA[December]]></translation>
-      </item>
-
 		</core>
 	</frontend>
 </locale>
