@@ -20,6 +20,10 @@
 				<translation language="nl"><![CDATA[Events categorie]]></translation>
 				<translation language="en"><![CDATA[Events category]]></translation>
 			</item>
+			<item type="label" name="NumItems">
+				<translation language="nl"><![CDATA[Events]]></translation>
+				<translation language="en"><![CDATA[Events]]></translation>
+			</item>
 			<item type="message" name="NoCategories">
 				<translation language="en"><![CDATA[no categories]]></translation>
 				<translation language="nl"><![CDATA[geen categorieën]]></translation>
