@@ -12,47 +12,60 @@
 				<translation language="nl"><![CDATA[Events]]></translation>
 				<translation language="en"><![CDATA[Events]]></translation>
 			</item>
-      <item type="label" name="EventsDetail">
-          <translation language="nl"><![CDATA[Events detail]]></translation>
-          <translation language="en"><![CDATA[Events detail]]></translation>
-      </item>
-      <item type="label" name="EventsCategory">
-          <translation language="nl"><![CDATA[Events categorie]]></translation>
-          <translation language="en"><![CDATA[Events category]]></translation>
-      </item>
-      <item type="message" name="NoCategories">
-          <translation language="en"><![CDATA[no categories]]></translation>
-          <translation language="nl"><![CDATA[geen categorieën]]></translation>
-      </item>
+			<item type="label" name="EventsDetail">
+				<translation language="nl"><![CDATA[Events detail]]></translation>
+				<translation language="en"><![CDATA[Events detail]]></translation>
+			</item>
+			<item type="label" name="EventsCategory">
+				<translation language="nl"><![CDATA[Events categorie]]></translation>
+				<translation language="en"><![CDATA[Events category]]></translation>
+			</item>
+			<item type="message" name="NoCategories">
+				<translation language="en"><![CDATA[no categories]]></translation>
+				<translation language="nl"><![CDATA[geen categorieën]]></translation>
+			</item>
 		</core>
 		<Pages>
 			<item type="label" name="UpcomingEvents">
 				<translation language="nl"><![CDATA[Eerstkomende evenementen]]></translation>
-      </item>
-    </Pages>
-  </backend>
+				<translation language="en"><![CDATA[Upcoming evenets]]></translation>
+			</item>
+		</Pages>
+	</backend>
 	<frontend>
 		<core>
-      <item type="label" name="Filter">
-        <translation language="nl"><![CDATA[Filter]]></translation>
-        <translation language="en"><![CDATA[Filter]]></translation>
-      </item>
-      <item type="label" name="PreviousYear">
-        <translation language="nl"><![CDATA[Vorig jaar]]></translation>
-        <translation language="en"><![CDATA[Previous year]]></translation>
-      </item>
-      <item type="label" name="NextYear">
-        <translation language="nl"><![CDATA[Volgend jaar]]></translation>
-        <translation language="en"><![CDATA[Next year]]></translation>
-      </item>
-      <item type="label" name="PreviousMonth">
-        <translation language="nl"><![CDATA[Vorige maand]]></translation>
-        <translation language="en"><![CDATA[Previous month]]></translation>
-      </item>
-      <item type="label" name="NextMonth">
-        <translation language="nl"><![CDATA[Volgende maand]]></translation>
-        <translation language="en"><![CDATA[Next month]]></translation>
-      </item>
+			<item type="label" name="Filter">
+				<translation language="nl"><![CDATA[Filter]]></translation>
+				<translation language="en"><![CDATA[Filter]]></translation>
+			</item>
+			<item type="label" name="PreviousYear">
+				<translation language="nl"><![CDATA[Vorig jaar]]></translation>
+				<translation language="en"><![CDATA[Previous year]]></translation>
+			</item>
+			<item type="label" name="NextYear">
+				<translation language="nl"><![CDATA[Volgend jaar]]></translation>
+				<translation language="en"><![CDATA[Next year]]></translation>
+			</item>
+			<item type="label" name="PreviousMonth">
+				<translation language="nl"><![CDATA[Vorige maand]]></translation>
+				<translation language="en"><![CDATA[Previous month]]></translation>
+			</item>
+			<item type="label" name="NextMonth">
+				<translation language="nl"><![CDATA[Volgende maand]]></translation>
+				<translation language="en"><![CDATA[Next month]]></translation>
+			</item>
+			<item type="label" name="Written">
+				<translation language="nl"><![CDATA[Geschreven]]></translation>
+				<translation language="en"><![CDATA[Written]]></translation>
+			</item>
+			<item type="label" name="From">
+				<translation language="nl"><![CDATA[Van]]></translation>
+				<translation language="en"><![CDATA[From]]></translation>
+			</item>
+			<item type="label" name="To">
+				<translation language="nl"><![CDATA[Tot]]></translation>
+				<translation language="en"><![CDATA[To]]></translation>
+			</item>
 		</core>
 	</frontend>
 </locale>
