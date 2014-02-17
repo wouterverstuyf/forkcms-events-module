@@ -125,6 +125,20 @@ class BackendEventsModel
 	}
 
 	/**
+	 * Is this category allowed to be deleted?
+	 *
+	 * @return	bool
+	 * @param	int $id		The category id to check.
+	 */
+	public static function isCategoryAllowedToBeDeleted($id)
+	{
+		return ! (bool) BackendModel::getContainer()->get('database')->getVar('SELECT COUNT(i.id)
+														FROM events AS i
+														WHERE i.category_id = ?',
+														array((int) $id));
+	}
+
+	/**
 	 * Fetch a category
 	 *
 	 * @param int $id

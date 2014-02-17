@@ -59,6 +59,10 @@ class BackendEventsEditCategory extends BackendBaseActionEdit
 
 		// assign the data
 		$this->tpl->assign('item', $this->record);
+
+		// can the category be deleted?
+		if(BackendEventsModel::isCategoryAllowedToBeDeleted($this->id)) $this->tpl->assign('showDelete', true);
+
 	}
 
 	/**

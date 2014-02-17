@@ -39,60 +39,46 @@ class FrontendEventsIndex extends FrontendBaseBlock
 	/**
 	 * Filter form
 	 */
-	 private function loadForm()
-	 {
-	 	// create form
-	 	$this->frm = new FrontendForm('filter', '', 'get');
+	private function loadForm()
+	{
+		// create form
+		$this->frm = new FrontendForm('filter', '', 'get');
 
-	 	// values for dropdown months
-	 	if(!$this->filter['month']) $currentMonth = date('m', time());
-	 	else $currentMonth = $this->filter['month'];
+		// values for dropdown months
+		if(!$this->filter['month']) $currentMonth = date('m', time());
+		else $currentMonth = $this->filter['month'];
 
-	 	$arrayOfMonths = array(
-	 		'1' => ucfirst(FL::lbl('January')),
-	 		'2' => ucfirst(FL::lbl('February')),
-	 		'3' => ucfirst(FL::lbl('March')),
-	 		'4' => ucfirst(FL::lbl('April')),
-	 		'5' => ucfirst(FL::lbl('May')),
-	 		'6' => ucfirst(FL::lbl('June')),
-	 		'7' => ucfirst(FL::lbl('July')),
-	 		'8' => ucfirst(FL::lbl('August')),
-	 		'9' => ucfirst(FL::lbl('September')),
-	 		'10' => ucfirst(FL::lbl('October')),
-	 		'11' => ucfirst(FL::lbl('November')),
-	 		'12' => ucfirst(FL::lbl('December'))
-	 	);
+		// get months
+		$arrayOfMonths = SpoonLocale::getMonths(FRONTEND_LANGUAGE);
 
-	 	// values for dropdown years
-	 	if(!$this->filter['year']) $currentYear = date('Y', time());
-	 	else $currentYear = $this->filter['year'];
+		// values for dropdown years
+		if(!$this->filter['year']) $currentYear = date('Y', time());
+		else $currentYear = $this->filter['year'];
 
-	 	for($i = $currentYear-3; $i <= $currentYear+3; $i++) {
-	 		$arrayOfYears[$i] = $i;
-	 	}
+		for($i = $currentYear-3; $i <= $currentYear+3; $i++) {
+			$arrayOfYears[$i] = $i;
+		}
 
-	 	// add dropdowns to form
-	 	$this->frm->addDropdown('month', $arrayOfMonths, $currentMonth);
-	 	$this->frm->addDropdown('year', $arrayOfYears, $currentYear);
+		// add dropdowns to form
+		$this->frm->addDropdown('month', $arrayOfMonths, $currentMonth);
+		$this->frm->addDropdown('year', $arrayOfYears, $currentYear);
 
-	 	// parse form
-	 	$this->frm->parse($this->tpl);
-	 }
-
+		// parse form
+		$this->frm->parse($this->tpl);
+	}
 
 	/**
 	 * Get the position of the first day of the week
 	 */
 	private function getFirstDayOfMonthPosition($month, $year) {
-	  $weekpos = date("w",mktime(0,0,0,$month,1,$year));
-	  if ('WEEK_START' != 0)
-	    if ($weekpos < 'WEEK_START')
-	      $weekpos = $weekpos + 7 - 'WEEK_START';
-	    else
-	      $weekpos = $weekpos - 'WEEK_START';
-	  return $weekpos;
+		$weekpos = date("w",mktime(0,0,0,$month,1,$year));
+		if ('WEEK_START' != 0)
+			if ($weekpos < 'WEEK_START')
+				$weekpos = $weekpos + 7 - 'WEEK_START';
+			else
+				$weekpos = $weekpos - 'WEEK_START';
+		return $weekpos;
 	}
-
 
 	/**
 	 * Parse the page

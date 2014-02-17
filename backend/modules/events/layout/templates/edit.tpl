@@ -78,7 +78,7 @@
 							<div class="box">
 								<div class="heading">
 									<h3>
-										<label for="beginDateDate">{$lblBeginDate|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
+										<label for="beginDateDate">{$lblStartDate|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
 									</h3>
 								</div>
 								<div class="options">
